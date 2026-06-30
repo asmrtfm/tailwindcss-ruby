@@ -18,8 +18,9 @@ Gem::Specification.new do |spec|
   spec.metadata["changelog_uri"] = "https://github.com/flavorjones/tailwindcss-ruby/blob/main/CHANGELOG.md"
   spec.metadata["rubygems_mfa_required"] = "true"
 
-  spec.files = Dir["lib/**/*", "LICENSE.txt", "LICENSE-DEPENDENCIES", "README.md"]
+  spec.files = Dir["lib/**/*", "ext/**/*", "LICENSE.txt", "LICENSE-DEPENDENCIES", "README.md"]
   spec.bindir = "exe"
   spec.executables << "tailwindcss"
   spec.require_paths = ["lib"]
+  spec.extensions = ["ext/tailwindcss/extconf.rb"]
 end
